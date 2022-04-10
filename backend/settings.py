@@ -87,9 +87,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cpad-grp17',
         'USER': 'root',
-        'PASSWORD': 'cisco123',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD': 'My:S3cr3t/',
+        'HOST': '35.175.178.46',
+        'PORT': '30306',
     }
 }
 
