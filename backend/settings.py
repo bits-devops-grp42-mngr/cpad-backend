@@ -85,7 +85,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cpad-grp17',
+        'NAME': 'cpad-mysql',
         'USER': 'root',
         'PASSWORD': 'My:S3cr3t/',
         'HOST': '35.175.178.46',
