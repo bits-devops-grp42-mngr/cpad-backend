@@ -25,6 +25,12 @@ pipeline{
         }
       }
     }
+     stage('Docker Deploy'){
+            steps{
+              ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
+            }
+        }
+     
     stage('Remove Unused docker image') {
       steps{
         sh "docker rmi $imageName:$BUILD_NUMBER"
