@@ -25,11 +25,6 @@ pipeline{
         }
       }
     }
-     stage('Docker Deploy'){
-            steps{
-              ansiblePlaybook credentialsId: 'Staging', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
-            }
-        }
      
     stage('Remove Unused docker image') {
       steps{
