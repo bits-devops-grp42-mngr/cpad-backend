@@ -4,17 +4,16 @@ pipeline{
      registryCredential = 'dockerhubcpad'
      dockerImage =''
   }
-  agent {
-    docker {
-      image 'maven:3-alpine'
-      args '--privileged -v /root/.m2:/root/.m2'
-    }
-  }
+    agent {
+                docker {
+                    image 'python:2-alpine'
+                }
+            }
    stages {
      
          stage('Build'){
            steps{
-        sh 'mvn -B -DskipTests clean package'
+        sh 'python -m py_compile manage.py'
       
       }
     }
