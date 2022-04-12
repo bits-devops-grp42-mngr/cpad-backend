@@ -1,2 +1,2 @@
 [dev]
-172.31.95.245 ansible_user=root
+172.31.95.245 ansible_user=ubuntu
