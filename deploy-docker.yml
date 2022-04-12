@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.95.245
+- hosts: dev
   become: True
   tasks:
     - name: create container
