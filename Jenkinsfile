@@ -35,6 +35,5 @@ agent any
               ansiblePlaybook credentialsId: 'Prod', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'Docker-Prod.yml'
             }
         }	 
-   
   }
 }
