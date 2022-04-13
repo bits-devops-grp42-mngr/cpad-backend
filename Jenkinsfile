@@ -14,7 +14,7 @@ agent any
         }
       }
     }
-   stage('Deploy Image on DockerHub') {
+    stage('Deploy Image on DockerHub') {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
