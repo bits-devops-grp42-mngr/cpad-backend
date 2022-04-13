@@ -31,13 +31,6 @@ agent any
             }
         }
 		 
-     
-    stage('Remove Unused docker image') {
-      steps{
-        sh "docker rmi $imageName:$BUILD_NUMBER"
-         sh "docker rmi $imageName:latest"
- 
-      }
-    }
+   
   }
 }
