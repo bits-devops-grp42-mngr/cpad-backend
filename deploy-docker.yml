@@ -1,5 +1,5 @@
 ---
--host:dev
-taks:
--name:create container
- command: docker run -d --name cpadapi -p 8000:8000 28071989:/cpad-17:latest
+- host:dev
+  taks:
+    -name:create container
+     command: docker run -d --name cpadapi -p 8000:8000 28071989:/cpad-17:latest
