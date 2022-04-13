@@ -1,0 +1,5 @@
+- hosts: prod
+  tasks:
+  - name: create container
+    command: docker run -d --name cpadapi1 -p 8000:8000 28071989/cpad-17:latest
+  
