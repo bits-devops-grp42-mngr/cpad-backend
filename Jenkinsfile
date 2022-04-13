@@ -14,7 +14,7 @@ agent any
         }
       }
     }
-   stage('Deploy Image') {
+   stage('Deploy Image on DockerHub') {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
@@ -25,12 +25,16 @@ agent any
         }
       }
     }
-     stage('Docker Deploy'){
+     stage('Docker Staging Deploy'){
             steps{
               ansiblePlaybook credentialsId: 'Staging', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
             }
         }
-		 
+      stage('Docker Prod Deploy'){
+            steps{
+              ansiblePlaybook credentialsId: 'Prod', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy-docker.yml'
+            }
+        }	 
    
   }
 }
