@@ -32,7 +32,7 @@ agent any
         }
       stage('Docker Prod Deploy'){
             steps{
-              ansiblePlaybook credentialsId: 'Prod', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy-docker.yml'
+              ansiblePlaybook credentialsId: 'Prod', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'Docker-Prod.yml'
             }
         }	 
    
